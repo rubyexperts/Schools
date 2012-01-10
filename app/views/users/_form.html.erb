@@ -1,19 +1,64 @@
 <div id="signup_form">
 
+            <div class="login_box_two">
   <%= form_for @user, :url => users_path do |f| %>
-  
     <%= render "shared/error_messages", :target => @user %>
-
-    <%= render "first_name", :f => f %>
-    <%= render "last_name", :f => f %>
-    <%= render "email", :f => f %>
-    <%= render "type", :f => f %>
-    <%= render "password", :f => f %>
-    <%= render "password_confirmation", :f => f %>
-
-    <p><%= f.submit (@user.new_record? ? "Create" : "Update") %></p>
-    
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">First Name</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%"><%= text_field :user, :first_name, :style => 'width:234px; height:30px; border:#999999 1px solid;' %></td>
+                    </tr>
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">Last Name</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%"><%= text_field :user, :last_name, :style => 'width:234px; height:30px; border:#999999 1px solid;' %></td>
+                    </tr>
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">Email</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%"><%= text_field :user, :email, :style => 'width:234px; height:30px; border:#999999 1px solid;' %></td>
+                    </tr>
+                    <% if params[:type] %>
+                        <%= hidden_field :user, :type, :value => params[:type] %>
+                    <% else %>
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">Type</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%">
+                            <%= f.select( :type, %w(Parent Student), :style => 'width:234px; height:30px; border:#999999 1px solid;') %>
+                        </td>
+                    </tr>
+                    <% end %>
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">Password</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%"><%= text_field :user, :password, :style => 'width:234px; height:30px; border:#999999 1px solid;' %></td>
+                    </tr>
+                    <tr>
+                        <td width="2%">&nbsp;</td>
+                        <td width="28%" align="right">Confirm Password</td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="65%"><%= text_field :user, :password_confirmation, :style => 'width:234px; height:30px; border:#999999 1px solid;' %></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td width="5%">&nbsp;</td>
+                        <td>
+                           <br/>
+                           <input name="commit" type="image" src="/img/save.png" width="67" height="29" />
+                           &nbsp;&nbsp;Or &nbsp;&nbsp; <%= link_to "Cancel", "/home" %>
+                        </td>
+                    </tr>
+                </table>
   <% end %>
+            </div>
   
 </div>
 

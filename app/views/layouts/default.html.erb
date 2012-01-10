@@ -1,46 +1,93 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>School</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= @title %></title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
-     <div id="content"><!-- Wraps everything -->
-          <div id="header"><!--The Header -->
-              <div class="page-width">
-
-                  <h1> Admin </h1>
-                  <div id="user-cp"> <!--User Control Panel -->
-                       <p class="welcome">Welcome <em><%= current_user.email %></em></p>
-                       <ul>
-                           <li>&nbsp;<%= link_to "Logout", logout_path %></li>
-                       </ul>
-                  </div> 
-                  <div class="console_header">
-                  </div>
-
-                   <div class="headernav">
-                       <div class="item closet <% if @select == "home" %> active <% end %>">
-                          <a class="console" href="/home">Home</a>
-                       </div>
-                       <div class="item timeline <% if @select == "timeline" %> active <% end %>">
-                          <%= link_to "Add Student", new_user_path(:label => "student") %>
-                       </div>
-                       <div class="item timeline <% if @select == "timeline" %> active <% end %>">
-                          <%= link_to "Add Parent", new_user_path(:label => "parent") %>
-                       </div>
-                   </div>
-
-              </div>
-         </div>
-    </div>
-
-<body> 
-<%= yield %>
-
+<body>
+  <div class="container">
+    <div class="mid">
+<div class="login_head_box">
+<div style="width:300px; float:left; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#000000;">
+  <img src="img/Students-Profile-Grades-Add-new-Subject_03.png" width="16" height="14" />&nbsp;&nbsp;<%= @Type %> Home</div>
+<div style="width:300px; float:right; text-align:right; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#0036ff;">
+    <%= link_to "Logout", logout_path %> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+<div class="main_bx"></div>
+<div class="main_bx"><table width="800" border="0">
+  <tr>
+    <td width="115"><a href="/users/new?type=Student"><img src="img/Admin_03.png" width="109" height="29" /></a></td>
+    <td width="104"><a href="/users/new?type=Parent"><img src="img/Admin_05.png" width="100" height="29" /></a></td>
+    <td width="162">&nbsp;</td>
+    <td width="401"><a href=""><img src="img/Admin.png" width="154" height="29" /></a></td>
+  </tr>
+</table>
+</div>
+<div class="stu_detail_bx">
+  <table width="100%" border="0">
+  <tr>
+    <td height="148">
+    <div class="student_bx">
+<div class="student_bx_head">Student</div>
+<div class="spacer_6"></div>
+<div class="stu_detail_bxs">
+<table width="100%" border="0">
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td width="18%">Search</td>
+    <td width="60%"><input name="" type="text" style="width:170px; height:20px; border:#999999 1px solid;" value="First name" onblur="if(this.value=='') this.value='First name'" onfocus="if(this.value =='First name' ) this.value=''" /></td>
+    <td width="19%"><img src="img/ok_03.png" width="37" height="29" /></td>
+  </tr>
+</table>
+</div>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td>
+    <div class="student_bx">
+<div class="student_bx_head">Parent</div>
+<div class="spacer_6"></div>
+<div class="stu_detail_bxs">
+<table width="100%" border="0">
+  <tr>
+    <td width="3%">&nbsp;</td>
+    <td width="18%">Search</td>
+    <td width="60%"><input name="" type="text" style="width:170px; height:20px; border:#999999 1px solid;" value="First name" onblur="if(this.value=='') this.value='First name'" onfocus="if(this.value =='First name' ) this.value=''" /></td>
+    <td width="19%"><img src="img/ok_03.png" width="37" height="29" /></td>
+  </tr>
+</table>
+</div>
+</div>
+</td>
+  </tr>
+</table>
+</div>
+<div class="stu_detail_bx">
+<div class="student_bxs">
+<div class="student_bx_head">Alert / Updates</div>
+<div class="spacer_6"></div>
+<div class="stu_detail_bxs">
+<table width="100%" border="0">
+  <tr>
+    <td width="60%" height="150"><textarea name="" cols="" rows="" style="width:236px; height:139px; border:#999999 1px solid; margin:0 0 0 30px;"></textarea></td>
+  </tr>
+    <tr>
+    <td width="60%" height="37" align="center"><a href=""><img src="img/Admin_11.png" width="129" height="29" /></a></td>
+  </tr>
+      <tr>
+    <td width="60%" height="32" align="center"><a href=""><img src="img/Admin_14.png" width="129" height="29" /></a></td>
+  </tr>
+        <tr>
+    <td width="60%" height="32" align="center">&nbsp;</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+  </div>
 </body>
 </html>
-
 

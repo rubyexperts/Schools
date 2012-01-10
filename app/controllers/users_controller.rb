@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
 
-   #skip_before_filter :login_required, :only => [:new, :create, :confirmation_needed]
-   
+   #skip_before_filter :login_required, :only => [:new, :create, :confirmation_needed]   
    before_filter :login_required
-   layout 'default'
+  # layout 'default'
 
    def new
 	 @user = User.new
-	 @label = params[:label]
+	 @user_type = params[:type]
    end
 
    def create

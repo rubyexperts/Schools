@@ -1,15 +1,14 @@
 
 
-<% if @label ==  "student" %>
 
-    <%= render 'student_form' %>
-
-<% elsif @label == "parent" %>
-
-    <%= render 'parent_form' %>
-
-<% end %>
-
-
-<p><%#= link_to 'Home', root_path  %></p>
+<div class="mid">
+    <div class="login_head_box">
+        <div style="width:300px; float:left; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#000000;">
+            <img src="/img/person.png" width="16" height="14" />&nbsp;&nbsp;Admin - Add User</div>
+        <div style="width:300px; float:right; text-align:right; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#0036ff;"> <%= link_to "Logout", logout_path %> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer1"></div>
+    <%= render 'form' %>
+</div>
 

@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 	 if @user.valid? && @user.save
 	   redirect_to :action => :confirmation_needed, :controller => :confirmations
 	 else
+	   @user_type = params[:user][:type]
 	   render 'new'
 	 end
    end

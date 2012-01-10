@@ -1,12 +1,12 @@
 Schools::Application.routes.draw do
 
 
-    get 'signup' => 'users#new'
-    post 'signup' => 'users#create'
+  # get 'signup' => 'users#new'
+  #  post 'signup' => 'users#create'
 
     get 'login' => 'sessions#new'
     post 'login' => 'sessions#create', :as => :new_session
-    get 'logout' => 'sessions#destroy'    
+    get 'logout' => 'sessions#destroy'
 
     resources :password_resets, :only => [:new, :create, :edit, :update]
 
@@ -14,6 +14,7 @@ Schools::Application.routes.draw do
     get 'confirmation_needed' => 'confirmations#confirmation_needed'
 
     resources :home
+    resources :users
 
     root :to => "sessions#new"
     

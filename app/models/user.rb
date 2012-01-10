@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
    end
 
    def send_confirmation_instructions
-	 puts "Send Instructions".inspect
+	  puts "Send Instructions".inspect
 	  generate_token(:confirmation_token) if self.confirmation_token.nil?
 	  self.confirmation_sent_at = Time.zone.now
 	  save!
@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
    end   
 
    def encrypt_password(pass)
-	 puts "Encrypt Password".inspect
+	  puts "Encrypt Password".inspect
 	  BCrypt::Engine.hash_secret(pass, password_salt)
    end
 
@@ -73,7 +73,7 @@ class User < ActiveRecord::Base
    private
 
    def prepare_password
-	 puts "Prepare Password".inspect
+	  puts "Prepare Password".inspect
 	  unless password.blank?
 		self.password_salt = BCrypt::Engine.generate_salt
 		self.password_hash = encrypt_password(password)
@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
    end
 
    def generate_token(column)
-	 puts "Generate Token".inspect
+	  puts "Generate Token".inspect
 	  begin
 		self[column] = SecureRandom.urlsafe_base64
 	  end while User.exists?(column => self[column])

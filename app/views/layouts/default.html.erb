@@ -11,7 +11,7 @@
           <div id="header"><!--The Header -->
               <div class="page-width">
 
-                  <h1> Cab System </h1>
+                  <h1> Admin </h1>
                   <div id="user-cp"> <!--User Control Panel -->
                        <p class="welcome">Welcome <em><%= current_user.email %></em></p>
                        <ul>
@@ -26,7 +26,10 @@
                           <a class="console" href="/home">Home</a>
                        </div>
                        <div class="item timeline <% if @select == "timeline" %> active <% end %>">
-                          <a class="console" href="/home">Create Booking</a>
+                          <%= link_to "Add Student", new_user_path(:label => "student") %>
+                       </div>
+                       <div class="item timeline <% if @select == "timeline" %> active <% end %>">
+                          <%= link_to "Add Parent", new_user_path(:label => "parent") %>
                        </div>
                    </div>
 

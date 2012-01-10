@@ -1,8 +1,15 @@
-<h1> Sign Up </h1>
 
-<p> Already have an account? <%= link_to "Log in", login_path %>.</p>
 
-<%= render 'form' %>
+<% if @label ==  "student" %>
+
+    <%= render 'student_form' %>
+
+<% elsif @label == "parent" %>
+
+    <%= render 'parent_form' %>
+
+<% end %>
+
 
 <p><%#= link_to 'Home', root_path  %></p>
 

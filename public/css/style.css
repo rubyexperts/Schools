@@ -1,0 +1,431 @@
+body
+{
+	background:#FFF;
+	margin:auto;
+}
+a img
+{
+	border:0;
+}
+
+.container
+{
+	width:1000px;
+	margin:auto;
+}
+
+.mid
+{
+	width:900px;
+	height:680px;
+	border:#b2b2b2 1px solid;
+	margin:10px auto;
+}
+
+.login_head_box
+{
+	width:900px;
+	height:52px;
+	border-bottom:#b2b2b2 1px solid;
+float:left;
+}
+
+.spacer
+{
+	width:900px;
+	height:128px;
+	float:left;
+}
+
+.wel_head
+{
+	width:900px;
+	height:40px;
+	float:left;
+	text-align:center;
+	font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+}
+
+.spacer1
+{
+	width:217px;
+	height:400px;
+	float:left;
+}
+
+.login_box
+{
+	background:url(../img/1-Loging-Page_03.jpg);
+	width:458px;
+	height:234px;
+	float:left;
+		font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+}
+
+.login_box_head
+{
+	width:458px;
+	height:65px;
+	float:left;
+	overflow:hidden;
+	font-family:"Segoe UI";
+	font-size:17px;
+	font-weight:700;
+	color:#000000;
+	
+}
+
+.login_box_two
+{
+	width:458px;
+	float:left;
+	overflow:hidden;
+}
+
+.frgt_head
+{
+	width:900px;
+	float:left;
+	text-align:center;
+	font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+	margin:80px 0 0 0;
+}
+
+.profile_box
+{
+	width:800px;
+	float:left;
+	margin:15px 0 0 90px;
+	border:#CCC 1px solid;
+}
+
+.profile_boxs
+{
+	width:800px;
+	float:left;
+	margin:15px 0 0 90px;
+	border:#CCC 1px solid;
+	border-right:0;
+	border-top:0;
+	border-bottom:0;
+}
+
+
+.profile_box_one
+{
+	background:#ebf2fc;
+	width:176px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-top:#CCC 1px solid;
+		font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+	font-weight:600;
+	padding:8px 0 0 11px;
+}
+
+.profile_box_two
+{
+
+	width:176px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+}
+
+.profile_box_three
+{
+
+	width:190px;
+	float:left;
+	overflow:hidden;
+}
+
+.profile_box_four
+{
+
+	width:176px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+}
+
+
+
+.profile_box_three
+{
+
+	width:190px;
+	float:left;
+	overflow:hidden;
+}
+
+.profile_box_ones
+{
+	background:#ebf2fc;
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-top:#CCC 1px solid;
+		font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+	font-weight:600;
+	padding:8px 0 0 11px;
+}
+
+.profile_box_twos
+{
+
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+}
+
+.profile_box_threes
+{
+
+	width:142px;
+	float:left;
+	overflow:hidden;
+}
+
+.profile_box_fours
+{
+
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+}
+
+
+
+.profile_box_ones_s
+{
+	background:#ebf2fc;
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-top:#CCC 1px solid;
+		font-family:"Segoe UI";
+	font-size:15px;
+	color:#0036ff;
+	font-weight:600;
+	padding:8px 0 0 11px;
+}
+
+.profile_box_twos_s
+{
+
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+			font-family:"Segoe UI";
+	font-size:15px;
+	color:#0036ff;
+}
+
+.profile_box_threes_s
+{
+
+	width:142px;
+	float:left;
+	overflow:hidden;
+			font-family:"Segoe UI";
+	font-size:15px;
+	color:#0036ff;
+}
+
+.profile_box_fours_s
+{
+
+	width:130px;
+	height:25px;
+	float:left;
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+	padding:8px 0 0 11px;
+			font-family:"Segoe UI";
+	font-size:15px;
+	color:#0036ff;
+}
+
+.spacer_4
+{
+	width:900px;
+	height:50px;
+	float:left;
+}
+
+.blue_box
+{
+	background:#e5eefb;
+	width:295px;
+	height:128px;
+	float:left;
+	margin:15px 0 0 90px;
+	border:#CCC 1px solid;
+}
+
+.blue_box_one
+{
+
+	width:285px;
+	height:27px;
+	float:left;
+	border-bottom:#fff 1px solid;
+	margin:0 0 0 3px;
+	font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+	padding:5px 0 0 5px;
+}
+
+.blue_txt_area
+{
+	width:277px;
+	height:78px;
+	margin:6px 0 0 6px;
+}
+
+.school_prf
+{
+	width:900px;
+	float:left;
+	font-family:"Segoe UI";
+	font-size:15px;
+	color:#000000;
+
+}
+
+.main_bx
+{
+	
+width:800px;
+ float:left; 
+ margin:15px 0 0 90px;
+ 
+}
+
+.student_bx
+{width:300px;
+height:130px;
+float:left;
+ border:#CCCCCC 1px solid;
+}
+
+.student_bxs
+{width:300px;
+float:left;
+ border:#CCCCCC 1px solid;
+}
+
+.student_bx_head
+{
+	background:#e5eefb;
+	width:290px;
+	height:20px;
+	float:left;
+	padding:5px;
+	 font-family:'Segoe UI';
+   font-size:15px;
+    font-weight:bold;
+	 color:#000000;
+}
+
+.spacer_6
+{
+	width:300px;
+	height:30px;
+	float:left;
+
+}
+
+.stu_detail_bx
+{
+	width:300px;
+	float:left;
+	font-family:'Segoe UI';
+   font-size:15px;
+ margin:15px 0 0 90px;
+	 color:#000000;
+
+}
+
+.stu_detail_bxs
+{
+	width:300px;
+	float:left;
+	font-family:'Segoe UI';
+   font-size:15px;
+
+	 color:#000000;
+
+}
+
+
+
+.main_bx_two
+{
+	
+width:880px;
+ float:left; 
+ margin:15px 0 0 15px;
+ 
+}
+
+.main_bx_three
+{
+	background:#f0f5fd;
+width:880px;
+ float:left; 
+ margin:15px 0 0 15px;
+  border-top:#CCCCCC 1px solid;
+    border-bottom:#CCCCCC 1px solid;
+ 
+}
+
+.main_bx_four
+{
+	background:#f0f5fd;
+width:880px;
+ float:left; 
+ margin:0px 0 0 15px;
+
+    border-bottom:#CCCCCC 1px solid;
+ 
+}
+
+
+.main_bx_five
+{
+
+width:880px;
+ float:left; 
+ margin:0px 0 0 15px;
+
+ 
+}

@@ -9,6 +9,17 @@
     </div>
     <div class="spacer"></div>
     <div class="spacer1"></div>
-    <%= render 'form' %>
+    <% if params[:type] == "Student" %>
+     
+       <%= render 'student_form' %>
+    
+    <% elsif params[:type] == "Parent" %>
+    
+       <%= render 'parent_form' %>
+    
+    <% end %>
+    
+    <%#= render 'form' %>
+    
 </div>
 

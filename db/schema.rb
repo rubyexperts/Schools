@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111210032802) do
+ActiveRecord::Schema.define(:version => 20120110050931) do
 
   create_table "users", :force => true do |t|
     t.string   "type"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 20111210032802) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "year_of_joining"
+    t.string   "register_number"
+    t.string   "sex"
+    t.string   "student_class"
+    t.text     "address"
+    t.text     "student_registration"
   end
 
 end

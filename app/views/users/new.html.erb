@@ -10,16 +10,27 @@
     <div class="spacer"></div>
     <div class="spacer1"></div>
     
-    <% if params[:type] == "Student" || @user_type == "Student" %>
+    <div id="signup_form">
+
+       <div class="login_box_two">
+              <%= form_for @user, :url => users_path do |f| %>
+                    <%= render "shared/error_messages", :target => @user %>
+                    
+                    <% if params[:type] == "Student" || @user_type == "Student" %>
      
-       <%= render 'student_form' %>
-    
-    <% elsif params[:type] == "Parent" || @user_type == "Parent" %>
-    
-       <%= render 'parent_form' %>
-    
-    <% end %>
-    
+                         <%= render 'student_form', :f => f %>
+     
+                    <% elsif params[:type] == "Parent" || @user_type == "Parent" %>
+     
+                         <%= render 'parent_form', :f => f %>
+     
+                    <% end %>   
+                    
+              <% end %>
+            
+        </div>
+
+    </div>
     
 </div>
 

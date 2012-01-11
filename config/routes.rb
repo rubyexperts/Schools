@@ -15,6 +15,7 @@ Schools::Application.routes.draw do
 
     resources :home
     resources :users
+    resources :students
 
     root :to => "sessions#new"
     

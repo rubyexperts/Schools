@@ -1,0 +1,32 @@
+
+<div class="mid">
+
+	<div class="login_head_box">
+		<div style="width:300px; float:left; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#000000;">
+			<img src="/img/person.png" width="16" height="14" />&nbsp;&nbsp;Students Profile</div>
+		<div style="width:300px; float:right; text-align:right; margin:15px 0 0 15px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#0036ff;"> <%= link_to "Logout", logout_path %> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+	</div><br/>	
+
+	<div style="width:300px; float:left; margin:60px 0 0 85px; font-family:'Segoe UI'; font-size:15px; font-weight:bold; color:#000000;">
+	    &nbsp;&nbsp;<%= @student.first_name + " " + @student.last_name  if !@student.nil? %>
+	</div>
+	
+	<div style="width:300px; float:left; margin:60px 0 0 85px; font-family:'Segoe UI'; font-size:15px; color:#000000;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<%= link_to "Edit Profile", edit_user_path(@student) %> &nbsp;| &nbsp;
+		<%#= link_to "Delete Profile", "/grades?student_id=#{@student.id}" %>
+		<a rel="nofollow" data-method="delete" data-confirm="Are you sure?" class="delete" href="/users/<%= @student.id %>">Delete Profile</a>
+	</div>	
+		
+	<div style="width:300px; float:left; margin:109px 0 0 -681px; font-family:'Segoe UI'; font-size:15px; color:#000000;">
+		<%= check_box_tag "student_status", "#{@student.id}" %>
+		<label> Mark Absent </label>
+	</div>
+	
+    <div style="width:300px; float:left; margin:166px 0 0 -675px; font-family:'Segoe UI'; font-size:15px; color:#000000;">
+        <%= link_to "Grades", "/grades?student_id=#{@student.id}" %>
+	</div>    
+
+
+</div>

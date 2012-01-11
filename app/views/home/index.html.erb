@@ -1,10 +1,27 @@
 
-<p>
 
-     This Is Home Page after logging in
-	 
-	 
-	 My Name is <%= current_user.first_name %>
-	 
-	 
-	 </p>
+<script type= "text/javascript">
+
+     first_names =  "<%= @first_names %>".split(" ");
+	 first_names_bak = first_names
+	 stud_ids =  "<%= @student_ids %>";
+
+     $(document).ready(function()
+     {
+	    $("#studentname").autocomplete({source: first_names });
+     });
+
+    function check_value()
+    {
+       var student_name = $("#studentname").val().trim();
+	   var firstnames_index = first_names_bak.indexOf(student_name);
+
+	   var std_id = stud_ids[firstnames_index];
+	   $("#studentid").attr("value", std_id);
+	   
+      // $('#student-search').submit();
+	  
+    }
+  
+</script>
+

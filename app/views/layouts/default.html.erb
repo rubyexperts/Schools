@@ -4,6 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><%= @title %></title>
   <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <%= stylesheet_link_tag :all, 'jquery.ui.autocomplete' %>
+  <%= javascript_include_tag :defaults, 'jquery.ui.core', 'jquery.ui.widget', 'jquery.ui.position', 'jquery.ui.autocomplete', 'jquery.ui.datepicker' %>
+    
 </head>
 <body>
   <div class="container">
@@ -31,16 +34,27 @@
     <div class="student_bx">
 <div class="student_bx_head">Student</div>
 <div class="spacer_6"></div>
+
+<form action="/students" method="get" id="student-search" name="student-search" onsubmit="check_value()">
 <div class="stu_detail_bxs">
 <table width="100%" border="0">
   <tr>
     <td width="3%">&nbsp;</td>
     <td width="18%">Search</td>
-    <td width="60%"><input name="" type="text" style="width:170px; height:20px; border:#999999 1px solid;" value="First name" onblur="if(this.value=='') this.value='First name'" onfocus="if(this.value =='First name' ) this.value=''" /></td>
-    <td width="19%"><img src="img/ok_03.png" width="37" height="29" /></td>
+    <td width="60%">
+       <input name="studentname" type="text" id="studentname" style="width:170px; height:20px; border:#999999 1px solid;" 
+           value="First name" onblur="if(this.value=='') this.value='First name'" onfocus="if(this.value =='First name' ) this.value=''" />
+    </td>
+    <input type="hidden" value="" id="studentid" name="studentid" />
+    
+    <td width="19%">
+       <input type="submit" value="Go">
+    </td>
   </tr>
 </table>
 </div>
+</form>
+
 </div>
 </td>
   </tr>
@@ -87,7 +101,10 @@
 </div>
 </div>
 </div>
+
   </div>
+       <div class="container">
+         <%= yield %>
+     </div>
 </body>
 </html>
-
